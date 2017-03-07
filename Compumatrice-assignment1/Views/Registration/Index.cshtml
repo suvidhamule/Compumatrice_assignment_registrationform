@@ -1,0 +1,108 @@
+﻿@model Compumatrice_assignment1.Models.tbl_Registrationform
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Registration Form</h2>
+
+@using (Html.BeginForm("Registration","Create", new{ enctype = "multipart/form-data" }))
+{  
+    <form id= 'email_form' action="/Registration/Create" method="post">
+    <fieldset>
+     <div class="form-inline col-md-12 col-sm-12 col-xs-12" role="form">
+        <div class="editor-label form-group col-md-4 col-sm-4 col-xs-6">
+            @Html.Label("User Name")
+        </div>
+           <div class="editor-field form-group col-md-3 col-sm-3 col-xs-6">
+           @Html.TextBoxFor(model => model.username)
+           </div>
+           </div>
+    <div class="form-inline col-md-12 col-sm-12 col-xs-12" role="form">
+        <div class="editor-label form-group col-md-4 col-sm-4 col-xs-6">
+            @Html.Label("Password")
+        </div>
+        <div class="editor-field form-group col-md-3 col-sm-3 col-xs-6">
+           @Html.TextBoxFor(model => model.password)
+           </div>
+        
+    </div>
+     <div class="form-inline col-md-12 col-sm-12 col-xs-12" role="form">
+        <div class="editor-label form-group col-md-4 col-sm-4 col-xs-6">
+            @Html.Label("Confirm Password")
+        </div>
+        <div class="editor-field form-group col-md-3 col-sm-3 col-xs-6">
+           @Html.TextBox("confirmpassword")
+           </div>
+        
+    </div>
+
+     <div class="form-inline col-md-12 col-sm-12 col-xs-12" role="form">
+        <div class="editor-label form-group col-md-4 col-sm-4 col-xs-6">
+            @Html.Label("First Name")
+        </div>
+        <div class="editor-field form-group col-md-3 col-sm-3 col-xs-6">
+           @Html.TextBoxFor(model =>model.firstname)
+           </div>
+        
+    </div>
+     <div class="form-inline col-md-12 col-sm-12 col-xs-12" role="form">
+        <div class="editor-label form-group col-md-4 col-sm-4 col-xs-6">
+            @Html.Label("Last Name")
+        </div>
+        <div class="editor-field form-group col-md-3 col-sm-3 col-xs-6">
+           @Html.TextBoxFor(model => model.lastname)
+           </div>
+        
+    </div>
+
+     <div class="form-inline col-md-12 col-sm-12 col-xs-12" role="form">
+        <div class="editor-label form-group col-md-4 col-sm-4 col-xs-6">
+            @Html.Label("Email-Id")
+        </div>
+        <div class="editor-field form-group col-md-3 col-sm-3 col-xs-6">
+           @Html.TextBoxFor(model => model.email)
+           </div>
+        
+    </div>
+  
+     <div class="form-inline col-md-12 col-sm-12 col-xs-12" role="form">
+        <div class="editor-label form-group col-md-4 col-sm-4 col-xs-6">
+            @Html.Label("Phone No")
+        </div>
+        <div class="editor-field form-group col-md-3 col-sm-3 col-xs-6">
+           @Html.TextBoxFor(model=>model.phoneno)
+           </div>
+        
+    </div>
+
+     <div class="form-inline col-md-12 col-sm-12 col-xs-12" role="form">
+        <div class="editor-label form-group col-md-4 col-sm-4 col-xs-6">
+            @Html.Label("Location")
+        </div>
+        <div class="editor-field form-group col-md-3 col-sm-3 col-xs-6">
+           @Html.TextBoxFor(model => model.location)
+           </div>
+        
+    </div>
+    
+    
+  
+           </fieldset>
+          
+          
+    <div class="form-inline col-md-12 col-sm-12 col-xs-12 email_send" role="form">
+    <button type="button" class="btn btn-primary" id="Add" >Save</button>
+  <button type="button" class="btn btn-success" id="Clear">Reset</button>
+    </div>
+      </form>
+    
+     <table class="table" id="email_table">
+     
+    
+     </table>
+    
+     
+    
+}
+
+
